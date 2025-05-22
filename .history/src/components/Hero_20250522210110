@@ -1,9 +1,11 @@
+.jsx
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
   const { t } = useTranslation();
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [animationComplete, setAnimationComplete] = useState(false);
   
   // Comprobar si la imagen existe cuando el componente se monta
   useEffect(() => {
@@ -13,7 +15,15 @@ export default function Hero() {
     img.onerror = () => console.error("Error al cargar la imagen: /assets/ecov_big_icon.png");
   }, []);
   
-  // Textos de respaldo en caso de que las traducciones fallen
+  // Efecto para animación inicial
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimationComplete(true);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
+  
+  // Textos de respaldo
   const fallbackTexts = {
     title: "Your Green Crypto-Bro on Sui",
     subtitle: "La primera criptomoneda verde en Sui Network que combina rentabilidad con impacto ambiental positivo",
@@ -26,29 +36,30 @@ export default function Hero() {
     }
   };
   
-  // Función para obtener texto seguro (con fallback si falla la traducción)
+  // Función para obtener texto seguro
   const safeText = (key, fallback) => {
     const translated = t(key);
-    // Si la traducción devuelve la misma clave, usamos el fallback
     return translated === key ? fallback : translated;
   };
   
   return (
-    <section id="home" className="pt-28 pb-16 relative overflow-hidden">
+    <section id="home" className="pt-28 pb-16 relative overflow-hidden min-h-screen flex flex-col justify-center">
       {/* Efecto de fondo con partículas */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-green-50 via-white to-white"></div>
         <div className="particle-container"></div>
       </div>
       
-      {/* Nuevo icono grande superpuesto */}
+      {/* Nuevo icono grande con animación */}
       {imageLoaded && (
-        <div className="absolute top-32 inset-x-0 flex justify-center z-30">
-          <div className="relative scroll-reveal" data-aos="zoom-in" data-aos-delay="300">
+        <div className={`absolute top-32 inset-x-0 flex justify-center z-30 transition-all duration-1000 ${animationComplete ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
+          <div className="relative">
             <img 
               src="/assets/ecov_big_icon.png" 
               alt="EcoVault Big Icon" 
               className="w-52 h-52 md:w-72 md:h-72 object-contain filter drop-shadow-2xl animate-pulse-slow"
+              data-aos="zoom-in"
+              data-aos-delay="300"
             />
             <div className="absolute -inset-4 bg-gradient-to-b from-green-200 to-transparent opacity-40 rounded-full blur-2xl -z-10"></div>
             
@@ -63,7 +74,7 @@ export default function Hero() {
       <div className="relative z-20 max-w-6xl mx-auto px-4 pt-72 sm:pt-80 md:pt-96">
         <div className="text-center">
           <h1 
-            className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600 mb-6 scroll-reveal"
+            className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600 mb-6 transform transition-all duration-1000"
             data-aos="fade-up"
             data-aos-delay="500"
           >
@@ -71,7 +82,7 @@ export default function Hero() {
           </h1>
           
           <p 
-            className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-10 scroll-reveal"
+            className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-10"
             data-aos="fade-up"
             data-aos-delay="700"
           >
@@ -79,7 +90,7 @@ export default function Hero() {
           </p>
           
           <div 
-            className="flex flex-wrap justify-center gap-4 scroll-reveal"
+            className="flex flex-wrap justify-center gap-4"
             data-aos="fade-up"
             data-aos-delay="900"
           >
@@ -111,7 +122,7 @@ export default function Hero() {
             {['holders', 'community', 'projects'].map((key, index) => (
               <div 
                 key={key} 
-                className="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-xl shadow-md card-hover scroll-reveal"
+                className="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-xl shadow-md card-hover"
                 data-aos="fade-up"
                 data-aos-delay={1100 + (index * 200)}
               >
@@ -125,6 +136,13 @@ export default function Hero() {
             ))}
           </div>
         </div>
+      </div>
+      
+      {/* Efecto de onda en la parte inferior */}
+      <div className="wave-bg">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+        </svg>
       </div>
     </section>
   );

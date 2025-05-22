@@ -35,12 +35,6 @@ export default function Hero() {
   
   return (
     <section id="home" className="pt-28 pb-16 relative overflow-hidden">
-      {/* Efecto de fondo con partículas */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-green-50 via-white to-white"></div>
-        <div className="particle-container"></div>
-      </div>
-      
       {/* Nuevo icono grande superpuesto */}
       {imageLoaded && (
         <div className="absolute top-32 inset-x-0 flex justify-center z-30">
