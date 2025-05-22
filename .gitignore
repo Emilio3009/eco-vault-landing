@@ -1,4 +1,7 @@
-echo "node_modules/
+
+# Luego añádelo y haz commit
+git add .gitignore
+git commit -m "Corregir archivo .gitignore node_modules/
 .DS_Store
 .env
 .env.local
