@@ -1,0 +1,48 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "howToBuy": "Cómo Comprar",
+    "greenImpact": "Impacto Verde",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Roadmap",
+    "governance": "Gobernanza",
+    "whitepaper": "Whitepaper"
+  },
+  "about": {
+    "title": "¿Qué es EcoVault?",
+    "description": "EcoVault es un token en la red Sui que combina deflación automática con un fondo de inversión dedicado a proyectos de restauración de flora, fauna y ecosistemas.",
+    "features": {
+      "burn": "1% burn en cada transacción",
+      "fund": "1% al Green Fund",
+      "staking": "1% para staking & buyback",
+      "voting": "Votaciones comunitarias para financiamiento"
+    }
+  },
+  "tokenomics": {
+    "title": "Tokenomics",
+    "subtitle": "Distribución, fees y quema",
+    "description": "La distribución del token garantiza equidad, sostenibilidad y compromiso con la comunidad.",
+    "keyFeatures": "Características principales",
+    "tokenStats": "Estadísticas del token",
+    "transactionFees": "Fees por transacción",
+    "deflationary": "Mecanismo deflacionario",
+    "deflationaryDescription": "Con cada transacción, el 1% de los tokens se queman permanentemente, reduciendo el suministro total y potencialmente aumentando el valor a largo plazo.",
+    "distribution": {
+      "community": "Comunidad",
+      "development": "Desarrollo",
+      "ecoFund": "Fondo ecológico/altruista",
+      "liquidity": "Liquidez inicial"
+    },
+    "stats": {
+      "totalSupply": "Suministro total",
+      "initialMarketCap": "Cap. mercado inicial",
+      "burnRate": "Tasa de quema"
+    },
+    "fees": {
+      "burn": "Quema",
+      "ecoFund": "Fondo verde",
+      "staking": "Staking"
+    }
+  }
+}

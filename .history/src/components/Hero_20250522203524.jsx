@@ -1,0 +1,66 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+export default function Hero() {
+  const { t } = useTranslation();
+  
+  return (
+    <section id="home" className="pt-28 pb-16 relative overflow-hidden">
+      {/* Imagen grande entre el header y el texto principal */}
+      <div className="absolute top-0 inset-x-0 flex justify-center z-10">
+        <div className="w-full max-w-4xl relative -mt-5">
+          <img 
+            src="/assets/ecov_hero_illustration.png" 
+            alt="EcoVault Hero" 
+            className="w-full h-auto object-contain transform scale-125 filter drop-shadow-2xl"
+          />
+          {/* Efectos de sombra y brillo */}
+          <div className="absolute -inset-10 bg-gradient-to-b from-green-200 to-transparent opacity-30 blur-3xl -z-10"></div>
+          <div className="absolute -bottom-5 inset-x-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+        </div>
+      </div>
+      
+      {/* Ajustamos el padding superior para dar espacio a la imagen */}
+      <div className="relative z-20 max-w-6xl mx-auto px-4 pt-72 sm:pt-80 md:pt-96">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600 mb-6">
+            {t('hero.title')}
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-10">
+            {t('hero.subtitle')}
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="#howtobuy" 
+              className="px-8 py-3 bg-green-500 text-white font-medium rounded-full hover:bg-green-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              {t('hero.buyButton')}
+            </a>
+            <a 
+              href="#about" 
+              className="px-8 py-3 border-2 border-green-500 text-green-600 font-medium rounded-full hover:bg-green-50 transition-all shadow-md hover:shadow-lg"
+            >
+              {t('hero.learnButton')}
+            </a>
+          </div>
+          
+          {/* Stats o highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
+            {['holders', 'community', 'projects'].map((key) => (
+              <div key={key} className="bg-white bg-opacity-70 backdrop-blur-sm p-6 rounded-xl shadow-md">
+                <div className="text-3xl font-bold text-green-600 mb-2">
+                  {t(`hero.stats.${key}.value`)}
+                </div>
+                <div className="text-gray-600">
+                  {t(`hero.stats.${key}.label`)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

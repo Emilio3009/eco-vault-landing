@@ -1,0 +1,28 @@
+{
+  "header": {},
+  "navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "howToBuy": "Comment Acheter",
+    "greenImpact": "Impact Écologique",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Feuille de Route",
+    "governance": "Gouvernance",
+    "whitepaper": "Livre Blanc"
+  },
+  "hero": {
+    "title": "Votre Crypto Verte sur Sui",
+    "description": "EcoVault combine une tokenomics déflationniste avec un fonds d'investissement dédié à des projets de restauration environnementale.",
+    "button": "Comment Acheter"
+  },
+  "about": {
+    "title": "Qu'est-ce que EcoVault?",
+    "description": "EcoVault est un jeton sur le réseau Sui qui combine la déflation automatique avec un fonds d'investissement dédié aux projets de restauration de la flore, de la faune et des écosystèmes.",
+    "features": {
+      "burn": "1% brûlé à chaque transaction",
+      "fund": "1% au Green Fund",
+      "staking": "1% pour le staking & rachat",
+      "voting": "Vote communautaire pour le financement"
+    }
+  }
+}

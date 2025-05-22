@@ -1,0 +1,46 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "howToBuy": "How to Buy",
+    "greenImpact": "Green Impact",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Roadmap",
+    "governance": "Governance",
+    "whitepaper": "Whitepaper"
+  },
+  "hero": {
+    "title": "Your Green Crypto on Sui",
+    "description": "EcoVault combines deflationary tokenomics with an investment fund dedicated to environmental restoration projects.",
+    "button": "How to Buy"
+  },
+  "about": {
+    "title": "What is EcoVault?",
+    "description": "EcoVault is a token on the Sui network that combines automatic deflation with an investment fund dedicated to flora, fauna and ecosystem restoration projects.",
+    "features": {
+      "burn": "1% burn on each transaction",
+      "fund": "1% to the Green Fund",
+      "staking": "1% for staking & buyback",
+      "voting": "Community voting for funding"
+    }
+  },
+  "howToBuy": {
+    "title": "How to Buy EcoVault",
+    "steps": {
+      "step1": "Create a Sui wallet",
+      "step2": "Buy SUI on an exchange",
+      "step3": "Transfer SUI to your wallet",
+      "step4": "Connect your wallet to our DApp",
+      "step5": "Swap SUI for EcoVault"
+    }
+  },
+  "impact": {
+    "title": "Our Green Impact",
+    "description": "We fund real environmental restoration projects through our Green Fund."
+  },
+  "tokenomics": {
+    "title": "Tokenomics",
+    "supply": "Total Supply",
+    "distribution": "Distribution"
+  }
+}

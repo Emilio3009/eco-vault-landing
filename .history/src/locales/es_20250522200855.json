@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "howToBuy": "Cómo Comprar",
+    "greenImpact": "Impacto Verde",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Roadmap",
+    "governance": "Gobernanza",
+    "whitepaper": "Whitepaper"
+  },
+  "about": {
+    "title": "¿Qué es EcoVault?",
+    "description": "EcoVault es un token en la red Sui que combina deflación automática con un fondo de inversión dedicado a proyectos de restauración de flora, fauna y ecosistemas.",
+    "features": {
+      "burn": "1% burn en cada transacción",
+      "fund": "1% al Green Fund",
+      "staking": "1% para staking & buyback",
+      "voting": "Votaciones comunitarias para financiamiento"
+    }
+  }
+}

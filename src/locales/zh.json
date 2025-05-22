@@ -1,0 +1,24 @@
+{
+  "header": {},
+  "hero": {},
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "howToBuy": "如何购买",
+    "greenImpact": "绿色影响",
+    "tokenomics": "代币经济学",
+    "roadmap": "路线图",
+    "governance": "治理",
+    "whitepaper": "白皮书"
+  },
+  "about": {
+    "title": "什么是EcoVault?",
+    "description": "EcoVault是Sui网络上的一种代币，它将自动通缩与专门用于植物、动物和生态系统恢复项目的投资基金相结合。",
+    "features": {
+      "burn": "每笔交易销毁1%",
+      "fund": "1%进入绿色基金",
+      "staking": "1%用于质押和回购",
+      "voting": "社区投票决定资金用途"
+    }
+  }
+}

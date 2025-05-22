@@ -1,0 +1,24 @@
+{
+  "header": {},
+  "hero": {},
+  "navigation": {
+    "home": "ホーム",
+    "about": "私たちについて",
+    "howToBuy": "購入方法",
+    "greenImpact": "環境への影響",
+    "tokenomics": "トークノミクス",
+    "roadmap": "ロードマップ",
+    "governance": "ガバナンス",
+    "whitepaper": "ホワイトペーパー"
+  },
+  "about": {
+    "title": "EcoVaultとは？",
+    "description": "EcoVaultはSuiネットワーク上のトークンで、自動デフレーションと植物、動物、生態系の復元プロジェクト専用の投資ファンドを組み合わせています。",
+    "features": {
+      "burn": "取引ごとに1%のバーン",
+      "fund": "1%をグリーンファンドへ",
+      "staking": "1%をステーキングとバイバックへ",
+      "voting": "資金調達のためのコミュニティ投票"
+    }
+  }
+}

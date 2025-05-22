@@ -1,0 +1,18 @@
+{
+  "header": {},
+  "navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "howToBuy": "Comment Acheter",
+    "greenImpact": "Impact Écologique",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Feuille de Route",
+    "governance": "Gouvernance",
+    "whitepaper": "Livre Blanc"
+  },
+  "hero": {
+    "title": "Votre Crypto Verte sur Sui",
+    "description": "EcoVault combine une tokenomics déflationniste avec un fonds d'investissement dédié à des projets de restauration environnementale.",
+    "button": "Comment Acheter"
+  }
+}
