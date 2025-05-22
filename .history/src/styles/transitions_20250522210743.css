@@ -1,0 +1,80 @@
+/* Animación inicial de la página */
+body {
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+body.animate-fadeIn {
+  opacity: 1;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transiciones de sección */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Transición del header */
+header {
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header.scroll-up {
+  transform: translateY(0);
+}
+
+header.scroll-down {
+  transform: translateY(-100%);
+}
+
+/* Efecto de ondas en el fondo */
+.wave-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-bg svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.wave-bg .shape-fill {
+  fill: #FFFFFF;
+}
+
+/* Efectos de card hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación de botones */
+.button-float {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-float:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}

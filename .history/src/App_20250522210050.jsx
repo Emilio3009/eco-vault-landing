@@ -11,17 +11,25 @@ import Footer from './components/Footer';
 import ScrollIndicator from './components/ScrollIndicator';
 import AnimationProvider from './components/AnimationProvider';
 import { useScrollNavigation } from './hooks/useScrollNavigation';
-import './styles/animations.css';
+
+// Importamos estilos adicionales para transiciones de página
+import './styles/transitions.css';
 
 function App() {
-  // Usar el hook de navegación con scroll suave
   useScrollNavigation();
   
   useEffect(() => {
     // Añadir clase para animación de entrada inicial
-    document.body.classList.add('animate-fadeIn');
+    document.body.classList.add('loaded');
+    
+    // Limpiar estado de scroll al cargar la página
+    window.history.scrollRestoration = 'manual';
+    
+    return () => {
+      document.body.classList.remove('loaded');
+    };
   }, []);
-
+  
   return (
     <AnimationProvider>
       <div className="app-container">

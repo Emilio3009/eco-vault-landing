@@ -20,8 +20,34 @@ function App() {
   useEffect(() => {
     // Añadir clase para animación de entrada inicial
     document.body.classList.add('animate-fadeIn');
+    
+    // Limpiar estado de scroll al cargar la página
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    
+    // Implementar detección de elementos visibles para animaciones
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    // Observar todos los elementos con la clase scroll-reveal
+    document.querySelectorAll('.scroll-reveal').forEach(element => {
+      observer.observe(element);
+    });
+    
+    return () => {
+      // Limpiar observer
+      document.querySelectorAll('.scroll-reveal').forEach(element => {
+        observer.unobserve(element);
+      });
+    };
   }, []);
-
+  
   return (
     <AnimationProvider>
       <div className="app-container">
